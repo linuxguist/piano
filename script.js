@@ -32,22 +32,26 @@ else if (document.addEventListener) document.addEventListener('DOMContentLoaded'
 
 // Declaring stuff
   myName = ""; // declaring a variable for my easter egg
-  audioPlayer = document.getElementsByTagName('audio')[0];
+  // audioPlayer = document.getElementsByTagName('audio')[0];
 
   // ------ Functions ------
   // Getting the letter sound and playing it.
   function setLetterSound(letterVariable) {
-    var mp3Source = document.getElementById('mp3Source');
-    var oggSource = document.getElementById('oggSource');
-    mp3Source.src = 'soundsiv/' + letterVariable +'.mp3';
-    oggSource.src = 'soundsiv/' + letterVariable +'.ogg';
+    var mp3Source = document.getElementById(letterVariable);
+    console.log(mp3Source);
+    console.log(mp3Source.src);
+    audioPlayer = document.getElementById(letterVariable);
+    console.log(audioPlayer);
+    // var oggSource = document.getElementById('oggSource');
+    // mp3Source.src = 'soundsiv/' + letterVariable +'.mp3';
+    // oggSource.src = 'soundsiv/' + letterVariable +'.ogg';
   }
 
   function setGenericSound() {
-    var mp3Source = document.getElementById('mp3Source');
-    var oggSource = document.getElementById('oggSource');
-    mp3Source.src = 'soundsiv/like-glass.mp3';
-    oggSource.src = 'soundsiv/like-glass.ogg';
+    var mp3Source = document.getElementById('like-glass');
+    // var oggSource = document.getElementById('oggSource');
+    // mp3Source.src = 'soundsiv/like-glass.mp3';
+    // oggSource.src = 'soundsiv/like-glass.ogg';
   }
 
   // Generating a new element to restart the CSS3 animation.
